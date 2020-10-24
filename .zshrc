@@ -86,3 +86,16 @@ alias ns="npm start"
 alias ll="ls -al"   # List all files in current directory in long list format
 alias o="open ."    # Open the current directory in Finder
 alias gs="$PULLMSG git status"
+alias ghnew="open http://github.com/new"
+alias ghrepos="open http://github.com/Steviebaa?tab=repositories"
+alias bb="open http://bitbucket.org/dashboard/repositories"
+function google () {
+    LINK=$1
+    LINK=${LINK// /+}
+    open "https://www.google.com/search?q=${LINK}"
+}
+function yt () {
+    LINK=$1
+    LINK=${LINK// /+}
+    open "https://www.youtube.com/results?search_query=${LINK}"
+}
