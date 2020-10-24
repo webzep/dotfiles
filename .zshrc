@@ -89,11 +89,15 @@ alias gs="$PULLMSG git status"
 alias ghnew="open http://github.com/new"
 alias ghrepos="open http://github.com/Steviebaa?tab=repositories"
 alias bb="open http://bitbucket.org/dashboard/repositories"
+alias gpom="git push origin master"
+alias gpo="git push origin"
+
 function google () {
     LINK=$1
     LINK=${LINK// /+}
     open "https://www.google.com/search?q=${LINK}"
 }
+
 function yt () {
     LINK=$1
     LINK=${LINK// /+}
