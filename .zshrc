@@ -1,19 +1,3 @@
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/steve/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/steve/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/steve/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/steve/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
 # HISTORY
 # Add time stamps to history
 setopt EXTENDED_HISTORY
@@ -42,10 +26,7 @@ autoload -Uz compinit && compinit -i
 setopt CORRECT
 setopt CORRECT_ALL
 
-# DING
-alias -g ding='echo 🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔; echo -e DING DING DING; echo 🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔; tput bel;'
-
-# Colours
+# COLORS
 TXTRED="%F{red}" # Red
 TXTGRN="%F{green}" # Green
 BLDGRN="%B%F{green}" # Bold Green
@@ -67,7 +48,7 @@ function wisdom {
 }
 wisdom
 
-# GIT
+# GIT ON RIGHT SIDE PROMPT
 autoload -Uz vcs_info
 precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
@@ -80,6 +61,7 @@ zstyle ':vcs_info:*' enable git
 PULLMSG='echo ""; echo 👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾;''echo "                  PULL";''echo 👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾; echo "";'
 BRRR='echo "🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺";'
 
+alias -g ding='echo 🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔; echo -e DING DING DING; echo 🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔🔔; tput bel;'
 alias drunk="git checkout -b drunk; echo ''; $BRRR echo '          Go change the world! 🚀'; $BRRR echo '';"
 alias c="$PULLMSG code ."
 alias ns="npm start"
